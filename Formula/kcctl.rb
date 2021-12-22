@@ -1,16 +1,16 @@
 class Kcctl < Formula
   desc "kcctl -- A CLI for Apache Kafka Connect"
   homepage "https://github.com/kcctl/kcctl"
-  version "1.0.0.Alpha3"
+  version "1.0.0.Alpha4"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.Alpha3/kcctl-1.0.0.Alpha3-linux-x86_64.zip"
-    sha256 "ba8b641c2693330b351412361583b2b3fd6890ef0cee25fba8bb82ea4e510e6a"
+    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.Alpha4/kcctl-1.0.0.Alpha4-linux-x86_64.zip"
+    sha256 "b499cc47c83c25df9541c92a2dd36e458988c7cfe76aac3d009192bf6ef6b3e7"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.Alpha3/kcctl-1.0.0.Alpha3-osx-x86_64.zip"
-    sha256 "525a87b3b0e91c6fc6af82f2e6f4238e207b9793add7e1577272e7747a1546fb"
+    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.Alpha4/kcctl-1.0.0.Alpha4-osx-x86_64.zip"
+    sha256 "f3649b1d55c6dcf5efc24f8b45d528ca418224c5f18dab13d30bef854ede6907"
   end
 
 
@@ -21,6 +21,6 @@ class Kcctl < Formula
 
   test do
     output = shell_output("#{bin}/kcctl --version")
-    assert_match "1.0.0.Alpha3", output
+    assert_match "1.0.0.Alpha4", output
   end
 end
