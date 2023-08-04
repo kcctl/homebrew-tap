@@ -1,21 +1,21 @@
-# Generated with JReleaser 1.4.0 at 2023-01-22T08:24:53.248069676Z
+# Generated with JReleaser 1.7.0 at 2023-08-04T12:51:50.500876168Z
 class Kcctl < Formula
   desc "kcctl -- A CLI for Apache Kafka Connect"
   homepage "https://github.com/kcctl/kcctl"
-  version "1.0.0.Beta3"
+  version "1.0.0.CR1"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.Beta3/kcctl-1.0.0.Beta3-linux-x86_64.zip"
-    sha256 "2a44837c59bec175a183ff458f8fe1bdb69de6dbc1cd72bae507c0709ce00e5b"
+    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.CR1/kcctl-1.0.0.CR1-linux-x86_64.zip"
+    sha256 "353bd19716eee0783eec616ab60350189bc0d8024ded9588caba53d9db1ec936"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.Beta3/kcctl-1.0.0.Beta3-osx-x86_64.zip"
-    sha256 "a1702acdc3bf1ae442690d51cbc6339158625f218054d57d999cdd033b0247a4"
+    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.CR1/kcctl-1.0.0.CR1-osx-x86_64.zip"
+    sha256 "be450cb6c89d63cdbba3c0040ef483bd6f6910c994a74126156082cfe41d3b3a"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.Beta3/kcctl-1.0.0.Beta3-osx-x86_64.zip"
-    sha256 "a1702acdc3bf1ae442690d51cbc6339158625f218054d57d999cdd033b0247a4"
+    url "https://github.com/kcctl/kcctl/releases/download/v1.0.0.CR1/kcctl-1.0.0.CR1-osx-x86_64.zip"
+    sha256 "be450cb6c89d63cdbba3c0040ef483bd6f6910c994a74126156082cfe41d3b3a"
   end
 
 
@@ -26,6 +26,6 @@ class Kcctl < Formula
 
   test do
     output = shell_output("#{bin}/kcctl --version")
-    assert_match "1.0.0.Beta3", output
+    assert_match "1.0.0.CR1", output
   end
 end
